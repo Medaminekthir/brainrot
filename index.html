@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{position: absolute;top: 40%;left: 40%;}
+        body{background-color: pink;}
+    </style>
+</head>
+<body onload="document.getElementById('btn').disabled=true">
+    <div id="div-name"><label>ENTER YOUR NAME:</label> <br>
+    <input type="text" id="input-name" onblur="coucou()"><br>
+    <button id="btn" onclick="trik()">j'accept</button></div>
+    <script>
+function coucou(){
+esm=document.getElementById('input-name').value
+if(
+    esm!=null && esm!="" && esm.length>=4
+){
+    localStorage.setItem("esm", esm);
+    document.getElementById('btn').disabled=false
+}
+else(alert('redonner le nom'))}
+function trik(){
+
+    window.location.href="homepagebrainrot.html"
+}
+    </script>
+</body>
+</html>
